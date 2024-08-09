@@ -40,6 +40,15 @@ const Navbar = () => {
           <a className={navItemClass} href="#Projects">
             Projects
           </a>
+          <a
+            href={Bio.github}
+            target="_blank"
+            rel="noreferrer"
+            className="text-customDarkPurple w-fit flex gap-1 rounded-[20px]	border-2	justify-center items-center transition-all ease-out delay-75 duration-75		 cursor-pointer text-[16px] font-semibold no-underline py-2 px-5 hover:bg-[#8f64c3] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
+          >
+            <GitHub>Github</GitHub>
+            <div>Github</div>
+          </a>
         </ul>
       )}
 

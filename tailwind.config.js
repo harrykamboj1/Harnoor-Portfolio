@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      customDarkPurple: "#c6a2f3"
+      customDarkPurple: "#c6a2f3",
+      darkBlue: "#1c1c2c",
+      darkGreen: "#29684e",
+      skyblue: "#b2daf1",
     }
   },
   plugins: [],
