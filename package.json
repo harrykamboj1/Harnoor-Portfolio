@@ -14,8 +14,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
-    "framer-motion": "^11.3.21",
+    "framer-motion": "^11.3.24",
     "lucide-react": "^0.424.0",
     "math": "^0.0.3",
     "react": "^18.3.1",
@@ -26,6 +27,7 @@
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
     "styled-components": "^6.1.12",
+    "tailwind-merge": "^2.4.0",
     "three": "^0.167.1",
     "typewriter-effect": "^2.21.0",
     "web-vitals": "^2.1.4"
