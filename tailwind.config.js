@@ -14,7 +14,8 @@ module.exports = {
       lightBlue: "#67e8f8",
       shadowOrange: "#dc816f",
       lightGray: "#e3e2e5",
-      fadeOrange: "#fabf76"
+      fadeOrange: "#fabf76",
+      yellow: "#fff278"
     }
   },
   plugins: [],

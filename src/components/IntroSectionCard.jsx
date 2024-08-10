@@ -4,9 +4,9 @@ import { twMerge } from "tailwind-merge";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { Bio } from "../data/data";
 
-export const RevealBento = () => {
+export const IntroSectionCard = () => {
   return (
-    <div className="min-h-screen  px-5 py-12 ">
+    <div className="  px-5 py-12 ">
       <motion.div
         initial="initial"
         animate="animate"
