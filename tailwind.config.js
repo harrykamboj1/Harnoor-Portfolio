@@ -10,6 +10,11 @@ module.exports = {
       darkBlue: "#1c1c2c",
       darkGreen: "#29684e",
       skyblue: "#b2daf1",
+      lightGreen: "#86efac",
+      lightBlue: "#67e8f8",
+      shadowOrange: "#dc816f",
+      lightGray: "#e3e2e5",
+      fadeOrange: "#fabf76"
     }
   },
   plugins: [],
