@@ -8,7 +8,7 @@ const navItemClass = `text-customDarkPurple hover:scale-105 duration-60 font-med
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="h-20 flex items-center md:justify-evenly justify-between text-xl sticky top-0 z-10">
+    <div className="h-20  flex items-center md:justify-evenly justify-between text-xl static top-0 z-10">
       <div className="text-customDarkPurple text-2xl hover:scale-105 duration-60 font-semibold transition-all ease-in-out hover:text-[#8f64c3] no-underline py-1 pl-10">
         <a href="/">Portfolio</a>
       </div>

@@ -241,13 +241,13 @@ backend services`,
 
 export const projects = [
     {
-        id: 1,
+        id: 10,
         title: "CodeMate",
         date: "Apr 2024 - May 2023",
         description:
             "CodeMate is an application designed to connect developers and facilitate collaboration. With CodeMate, you can find and join rooms, share your screen, send messages, and reply to each other, enhancing your coding experience and productivity.",
         image:
-            "https://codemate-1geh.onrender.com/_next/image?url=%2Ficon.png&w=640&q=75",
+            "./CodeMate.png",
         tags: [
             "Nextjs",
             "PostgressSQL",
@@ -258,7 +258,7 @@ export const projects = [
             "Get Stream API",
             "Next Auth",
         ],
-        category: "web app",
+        category: "FullStack",
         github: "https://github.com/harrykamboj1/CodeMate",
         webapp: "https://codemate-1geh.onrender.com/",
     },
@@ -269,14 +269,14 @@ export const projects = [
         description:
             `AIMS Courses is dedicated to providing top-notch educational resources and courses for language proficiency exams and language learning. Our courses include: IELTS, PTE, French.The website is in the development phase, and we aim to launch it soon with a user-friendly interface and a robust backend to support our diverse range of courses.`,
         image:
-            "https://private-user-images.githubusercontent.com/49549662/354945843-4d73e860-9902-4b70-b79b-ec95f38795af.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI5OTkyMTksIm5iZiI6MTcyMjk5ODkxOSwicGF0aCI6Ii80OTU0OTY2Mi8zNTQ5NDU4NDMtNGQ3M2U4NjAtOTkwMi00YjcwLWI3OWItZWM5NWYzODc5NWFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA3VDAyNDgzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEwZGVlMTdiNDBhZTU1NGQxYWE1N2NlNjMwN2QwYzVkZjI5NGY1YjlmODhiYzcyNmI2YzczNTc2MTNmM2EwYWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ocExcbVG3CphqsQa_kAyjxIZLssiqbWOEbIwh8z0zaM",
+            "./Aims.png",
         tags: [
             "Nextjs",
             "Hygraph",
             "Shadcn UI",
             "GraphQl",
         ],
-        category: "web app",
+        category: "Frontend",
         github: "https://github.com/harrykamboj1/AIMS",
         webapp: "https://aims-olive.vercel.app/",
     },
@@ -287,9 +287,9 @@ export const projects = [
         description:
             "This is a comprehensive Finance SaaS Platform designed to help you track your income and expenses, categorize transactions, and gain insights through detailed charts.",
         image:
-            "https://private-user-images.githubusercontent.com/49549662/340761400-b86d1576-5911-4655-93bd-9d08a6dfd505.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI5OTk0NTUsIm5iZiI6MTcyMjk5OTE1NSwicGF0aCI6Ii80OTU0OTY2Mi8zNDA3NjE0MDAtYjg2ZDE1NzYtNTkxMS00NjU1LTkzYmQtOWQwOGE2ZGZkNTA1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA3VDAyNTIzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYxMWNjYTY3YTQyMDMyZGVmODk1YTI5NzFmZmNjODg4MTQyZGI4ZjdiZGNiMzMwZDJkYzZjYjg4M2IwOTQyYWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.IferlG_vqpi52Q2CqEEkIptvyssQtOM4mDiJaVLmgpg",
+            "./FinanceFlow.png",
         tags: ["Nextjs", "Reactjs", "Tanstack Query", "Tailwind CSS", "Recharts", "Hono", "Drizzle", "PostgresSql", "Clerk Auth"],
-        category: "web app",
+        category: "FullStack",
         github: "https://github.com/harrykamboj1/FinanceFlow",
         webapp: "https://finance-flow-lovat.vercel.app/",
 
@@ -301,7 +301,7 @@ export const projects = [
         description:
             "Welcome to our Discord Clone! This is an end-to-end full-stack and real-time application that replicates the core features of Discord. Our clone includes functionalities such as creating servers, channels, editing and deleting messages, and managing member roles.",
         image:
-            "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+            "./Discord.png",
         tags: [
             "Typescript",
             "Nextjs",
@@ -313,7 +313,7 @@ export const projects = [
             "PostgresSql",
             "React Query",
         ],
-        category: "web app",
+        category: "FullStack",
         github: "https://github.com/rishavchanda/Project-Management-App",
         webapp: "https://discord-qe77.onrender.com/",
     },
@@ -324,10 +324,49 @@ export const projects = [
         description:
             "This project is a Zoom clone built using WebRTC and React. The application provides video conferencing capabilities similar to Zoom, enabling users to engage in real-time video and audio communication.",
         image:
-            "",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgDPdfqji2JQcCVPn4lAD5WeOO-2yMXIOtLQ&s",
         tags: ["Reactjs", "Nodejs", "Webrtc", "Peer.js", "Expressjs"],
-        category: "web app",
+        category: "Backend",
         github: "https://github.com/harrykamboj1/zoom-clone",
-        webapp: "",
+        webapp: "https://github.com/harrykamboj1/zoom-clone",
+    },
+    {
+        id: 5,
+        title: "LeetCode Profile",
+        date: "Apr 2022 - Current",
+        description:
+            "This project is a Zoom clone built using WebRTC and React. The application provides video conferencing capabilities similar to Zoom, enabling users to engage in real-time video and audio communication.",
+        image:
+            "./LeetCode.png",
+        tags: ["Data Structures", "Algorithm"],
+        category: "DSA",
+        github: "https://leetcode.com/u/singhharnoor116/",
+        webapp: "https://leetcode.com/u/singhharnoor116/",
+    },
+    {
+        id: 5,
+        title: "Paytm Clone",
+        date: "Feb 2024 - Mar 2024",
+        description:
+            "This project is a clone of the Paytm app, focusing on replicating its core features related to digital payments and financial services. It aims to provide a learning resource for developers interested in understanding how such apps are built.",
+        image:
+            "./Paytm.png",
+        tags: ["Nodejs", "Express", "MongoDB"],
+        category: "FullStack",
+        github: "https://github.com/harrykamboj1/Paytm-clone",
+        webapp: "https://github.com/harrykamboj1/Paytm-clone",
+    },
+    {
+        id: 5,
+        title: "DashBoard",
+        date: "Jan 2024 - Jan 2024",
+        description:
+            "This project is a Dashboard built with React for Dashboardshowcasing the use of React.js for building dynamic user interfaces and Tailwind CSS for styling.",
+        image:
+            "./Dashboard.png",
+        tags: ["Javascript", "Reactjs", "Tailwind"],
+        category: "Frontend",
+        github: "https://github.com/harrykamboj1/Paytm-clone",
+        webapp: "https://dukaan-dashboard-jade.vercel.app/",
     }
 ];

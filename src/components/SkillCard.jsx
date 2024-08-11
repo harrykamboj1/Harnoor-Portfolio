@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 export const SkillBlock = ({ color, skill }) => (
   <div>
-    {console.log(skill)}
     <Block
       whileHover={{
         rotate: "0.4deg",
