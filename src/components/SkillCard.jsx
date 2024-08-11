@@ -1,14 +1,14 @@
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 
-export const SkillBlock = ({ color, skill }) => (
+export const SkillCard = ({ color, skill, className }) => (
   <div>
     <Block
       whileHover={{
         rotate: "0.4deg",
         scale: 1.03,
       }}
-      className={` bg-darkBlue h-full lg:h-96  w-full   rounded-lg border-r-8 border-b-8 border-r-${color} border-b-${color}   border-l-2 border-t-2 border-l-${color}  border-t-${color}  `}
+      className={className}
     >
       <div>
         <h1

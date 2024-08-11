@@ -1,5 +1,5 @@
 import React from "react";
-import { SkillBlock } from "./SkillCard";
+import { SkillCard } from "./SkillCard";
 import { skills } from "../data/data";
 
 const Skills = () => {
@@ -13,20 +13,36 @@ const Skills = () => {
 
       <div className="mt-10 flex md:flex-row flex-col md:justify-center sm:items-center">
         <div className="p-5">
-          <SkillBlock color="customDarkPurple" skill={skills[0]} />
+          <SkillCard
+            color="customDarkPurple"
+            skill={skills[0]}
+            className={` bg-darkBlue h-full lg:h-96  w-full   rounded-lg border-r-8 border-b-8 border-r-customDarkPurple border-b-customDarkPurple   border-l-2 border-t-2 border-l-customDarkPurple  border-t-customDarkPurple`}
+          />
         </div>
 
         <div className="p-5">
-          <SkillBlock color="yellow" skill={skills[1]} />
+          <SkillCard
+            color="yellow"
+            skill={skills[1]}
+            className={` bg-darkBlue h-full lg:h-96  w-full   rounded-lg border-r-8 border-b-8 border-r-yellow border-b-yellow   border-l-2 border-t-2 border-l-yellow  border-t-yellow`}
+          />
         </div>
       </div>
       <div className="mt-10 flex md:flex-row flex-col md:justify-center sm:items-center">
         <div className="p-5">
-          <SkillBlock color="fadeOrange" skill={skills[2]} />
+          <SkillCard
+            color="fadeOrange"
+            skill={skills[2]}
+            className={` bg-darkBlue h-full lg:h-96  w-full   rounded-lg border-r-8 border-b-8 border-r-fadeOrange border-b-fadeOrange   border-l-2 border-t-2 border-l-fadeOrange  border-t-fadeOrange`}
+          />
         </div>
 
         <div className="p-5">
-          <SkillBlock color="skyblue" skill={skills[3]} />
+          <SkillCard
+            color="skyblue"
+            skill={skills[3]}
+            className={` bg-darkBlue h-full lg:h-96  w-full   rounded-lg border-r-8 border-b-8 border-r-skyblue border-b-skyblue   border-l-2 border-t-2 border-l-skyblue  border-t-skyblue`}
+          />
         </div>
       </div>
     </section>
