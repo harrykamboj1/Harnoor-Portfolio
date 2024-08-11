@@ -1,4 +1,3 @@
-import { GitHub } from "@mui/icons-material";
 import React from "react";
 import { Bio } from "../data/data";
 import HeroHoverMotion from "./HeroHoverMotion";
@@ -6,7 +5,7 @@ import HeroHoverMotion from "./HeroHoverMotion";
 const HeroSection = () => {
   return (
     <section className="mx-auto px-4 pt-20 max-w-[1050px]">
-      <div className="flex flex-row py-6 px-3 md:px-0" id="about">
+      <div className="flex flex-row py-6 px-3 md:px-0" id="About">
         <div className="flex w-full justify-between items-center mb-12 md:mb-24">
           <div>
             <h1 className="md:text-8xl text-6xl  font-bold text-skyblue hover:scale-105  transition-all ease-in-out duration-300 cursor-pointer">

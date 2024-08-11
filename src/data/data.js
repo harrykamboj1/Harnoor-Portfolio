@@ -5,6 +5,7 @@ export const Bio = {
         "Freelancer",
     ],
     github: "https://github.com/harrykamboj1",
+    leetCode: "https://leetcode.com/u/singhharnoor116/",
     resume:
         "https://drive.google.com/file/d/1GvY3PM3wERCnoFOzM70iqRoANzukfVDX/view?usp=drive_link",
     linkedin: "https://www.linkedin.com/in/harnoor-singh-3b163714b/",
@@ -220,7 +221,7 @@ Utilized Reactjs, Java, Spring Boot, Hibernate, and Oracle Database to architect
     },
     {
         id: 1,
-        img: "https://www.f6s.com/content-resource/media/1403689_large.jpg",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5t8yotXeA7z1QWyiOJyKMIpPD_RAscPBRTg&s",
         role: "Software Developer Intern",
         company: "Starbuzz.ai",
         date: "Jan 2022 - June 2022",

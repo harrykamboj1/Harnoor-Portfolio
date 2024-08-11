@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { Bio } from "../data/data";
+import { SiLeetcode } from "react-icons/si";
 
 export const IntroSectionCard = () => {
   return (
@@ -71,6 +72,9 @@ const AboutBlock = () => (
       </a>
       <a href={Bio.github} target="_blank" rel="noreferrer">
         <BsGithub className="hover:scale-110 hover:text-[#fea390]" />
+      </a>
+      <a href={Bio.leetCode} target="_blank" rel="noreferrer">
+        <SiLeetcode className="hover:scale-110 hover:text-[#fea390]" />
       </a>
     </div>
   </Block>
