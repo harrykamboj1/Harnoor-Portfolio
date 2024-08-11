@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import IntroSection from "./components/IntroSection";
 import Navbar from "./components/Navbar";
@@ -15,6 +16,8 @@ function App() {
         <Skills />
         <WorkExperience />
         <ProjectSection />
+        <Footer />
+
       </div>
     </div>
   );
