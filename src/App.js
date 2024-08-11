@@ -17,7 +17,6 @@ function App() {
         <WorkExperience />
         <ProjectSection />
         <Footer />
-
       </div>
     </div>
   );
