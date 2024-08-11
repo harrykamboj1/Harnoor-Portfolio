@@ -16,7 +16,7 @@ export const SkillBlock = ({ color, skill }) => (
         >
           {skill?.title}
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 lg:p-4 p-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:p-4 p-3">
           {skill?.skills?.map((skill, index) => (
             <div key={index} className="p-2">
               <button

@@ -335,7 +335,7 @@ export const projects = [
         title: "LeetCode Profile",
         date: "Apr 2022 - Current",
         description:
-            "This project is a Zoom clone built using WebRTC and React. The application provides video conferencing capabilities similar to Zoom, enabling users to engage in real-time video and audio communication.",
+            "",
         image:
             "./LeetCode.png",
         tags: ["Data Structures", "Algorithm"],

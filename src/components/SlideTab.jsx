@@ -32,10 +32,10 @@ const SlideTabs = ({ onTabClick }) => {
         <Tab setPosition={setPosition}>Backend</Tab>
       </div>
       <div onClick={() => onTabClick("FullStack")}>
-        <Tab setPosition={setPosition}>Full-Stack</Tab>
+        <Tab setPosition={setPosition}>FullStack</Tab>
       </div>
       <div onClick={() => onTabClick("DSA")}>
-        <Tab setPosition={setPosition}>Data Structures & Algo</Tab>
+        <Tab setPosition={setPosition}>DSA</Tab>
       </div>
       <Cursor position={position} />
     </ul>
