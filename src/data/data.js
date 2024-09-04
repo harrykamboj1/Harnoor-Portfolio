@@ -376,7 +376,7 @@ export const projects = [
         description:
             "Official website of Aims (IELTS | PTE | FRENCH)",
         image:
-            "./Dashboard.png",
+            "./aims-website.png",
         tags: ["Javascript", "Reactjs", "Next.js", "Tailwind"],
         category: "Frontend",
         github: "https://github.com/harrykamboj1/Aims-website",
