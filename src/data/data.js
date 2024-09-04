@@ -243,7 +243,7 @@ export const projects = [
     {
         id: 10,
         title: "CodeMate",
-        date: "Apr 2024 - May 2023",
+        date: "Apr 2024 - May 2024",
         description:
             "CodeMate is an application designed to connect developers and facilitate collaboration. With CodeMate, you can find and join rooms, share your screen, send messages, and reply to each other, enhancing your coding experience and productivity.",
         image:
@@ -368,5 +368,18 @@ export const projects = [
         category: "Frontend",
         github: "https://github.com/harrykamboj1/Paytm-clone",
         webapp: "https://dukaan-dashboard-jade.vercel.app/",
+    },
+    {
+        id: 5,
+        title: "Aims website",
+        date: "Aug 2024 - Sep 2024",
+        description:
+            "Official website of Aims (IELTS | PTE | FRENCH)",
+        image:
+            "./Dashboard.png",
+        tags: ["Javascript", "Reactjs", "Next.js", "Tailwind"],
+        category: "Frontend",
+        github: "https://github.com/harrykamboj1/Aims-website",
+        webapp: "https://aimseducation.org/",
     }
 ];
