@@ -10,10 +10,9 @@ import WorkExperience from "./components/WorkExperience";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const primaryPurple = "#8B5CF6"; // Assuming this is your project's primary purple color
+  const primaryPurple = "#8B5CF6";
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
