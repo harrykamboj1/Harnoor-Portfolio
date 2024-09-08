@@ -8,11 +8,41 @@ const menuNavItemClass = `text-darkBlue hover:scale-105 duration-60 font-medium 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }, []);
 
   return (
     <div
-      className={`h-20 flex items-center justify-between text-xl top-0 z-10  transition-transform duration-300
-        `}
+      className={`h-20 flex items-center justify-between text-xl top-0 z-10 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : ""
+      } w-full`}
     >
       <div className="text-customDarkPurple text-2xl hover:scale-105 duration-60 font-semibold transition-all ease-in-out hover:text-[#8f64c3] no-underline py-1 pl-10">
         <a href="/">Portfolio</a>
@@ -49,7 +79,7 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="sm:hidden flex items-center justify-end">
+      <div className="sm:hidden flex items-center justify-end pr-6">
         <Menu
           onClick={() => setIsOpen(!isOpen)}
           className="text-customDarkPurple"
@@ -57,9 +87,9 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "flex" : "hidden"
-          } bg-customDarkPurple  opacity-100 overflow-auto z-50 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl p-6 sidebar`}
+          } bg-customDarkPurple opacity-100 overflow-auto z-50 absolute top-20 right-0 left-0 mx-0 my-0 rounded-b-xl p-6 sidebar`}
         >
-          <ul className="list-none  flex flex-col justify-end items-center flex-1">
+          <ul className="list-none flex flex-col justify-center items-center flex-1 w-full space-y-4">
             <a className={menuNavItemClass} href="#About">
               About
             </a>
@@ -76,7 +106,7 @@ const Navbar = () => {
               href={Bio.github}
               target="_blank"
               rel="noreferrer"
-              className="text-customDarkPurple w-fit flex gap-1 rounded-[20px] border-2 justify-center items-center transition-all ease-out delay-75 duration-75 bg-[#201f2c] cursor-pointer text-[16px] font-semibold no-underline py-2 px-5 hover:bg-[#201f2c] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
+              className="text-customDarkPurple w-full flex gap-1 rounded-[20px] border-2 justify-center items-center transition-all ease-out delay-75 duration-75 bg-[#201f2c] cursor-pointer text-[16px] font-semibold no-underline py-2 px-5 hover:bg-[#201f2c] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
             >
               <GitHub>Github</GitHub>
               <div>Github</div>
