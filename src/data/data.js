@@ -242,6 +242,51 @@ backend services`,
 export const projects = [
     {
         id: 10,
+        title: "Flex AI",
+        date: "Mar 2025 - Apr 2025",
+        description:
+            "Flex AI is a modern fitness platform powered by advanced AI technology. It provides personalized workout routines and diet plans tailored to individual goals, fitness levels, and dietary restrictions. Users can interact with an AI assistant through voice conversations to generate customized fitness programs.",
+        image:
+            "./Flexai.png",
+        tags: [
+            "Nextjs",
+            "PostgressSQL",
+            "Tailwind Css",
+            "Shadcn UI",
+            "Convex",
+            "VAPI",
+            "Clerk"
+        ],
+        category: "Frontend",
+        github: "https://github.com/harrykamboj1/Flex-AI",
+        webapp: "https://flex-ai-theta.vercel.app/",
+    },
+    {
+        id: 10,
+        title: "Gitlic",
+        date: "Jan 2025 - Mar 2025",
+        description:
+            "GitLic is a full-stack SaaS tool designed to help developers work and collaborate on complex projects. It leverages an end-to-end RAG (Retrieve, Augment, Generate) pipeline to provide an intuitive and efficient experience for managing GitHub repositories and pull requests.",
+        image:
+            "./Gitlic.png",
+        tags: [
+            "Nextjs",
+            "PostgressSQL",
+            "Tailwind Css",
+            "Shadcn UI",
+            "Prisma",
+            "Gemini AI",
+            "LangChain",
+            "Assembly AI",
+            "Razorpay",
+            "TRPC"
+        ],
+        category: "FullStack",
+        github: "https://github.com/harrykamboj1/GitLic",
+        webapp: "https://gitlic.vercel.app/",
+    },
+    {
+        id: 10,
         title: "CodeMate",
         date: "Apr 2024 - May 2024",
         description:
