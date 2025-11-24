@@ -35,12 +35,16 @@ export const ProjectCard = ({ project }) => {
       <div className="px-5 py-3 flex justify-between items-center">
         <a
           href={project.github}
+           target="_blank"
+          rel="noreferrer"
           className="block text-md w-30  hover:text-[#d16d59] text-shadowOrange border border-shadowOrange rounded-lg p-2 text-center"
         >
           {project.category === "DSA" ? "LeetCode Link" : "Github Link"}
         </a>
         <a
           href={project.webapp}
+          target="_blank"
+          rel="noreferrer"
           className="block text-md w-30  hover:text-[#d16d59] text-shadowOrange border border-shadowOrange rounded-lg p-2 text-center"
         >
           App. Link

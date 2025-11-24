@@ -242,6 +242,28 @@ backend services`,
 export const projects = [
     {
         id: 10,
+        title: "Invisly.ai",
+        date: "Oct 2025 - Nov 2025",
+        description:
+            "Invisly.ai is an advanced, AI-driven stock analysis platform that empowers retail investors with real-time insights, chart-driven analytics, AI agent recommendations, stock alerts, and curated financial news — all in a clean and fast interface.",
+        image:
+            "./invisly.png",
+        tags: [
+            "Nextjs",
+            "MongoDB",
+            "Tailwind Css",
+            "Shadcn UI",
+            "Inngest",
+            "Langchain Agents",
+            "Better Auth",
+            "Gemini Api"
+        ],
+        category: "FullStack",
+        github: "https://github.com/harrykamboj1/invisly",
+        webapp: "https://invisly.vercel.app/",
+    },
+    {
+        id: 10,
         title: "Flex AI",
         date: "Mar 2025 - Apr 2025",
         description:
