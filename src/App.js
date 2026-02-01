@@ -1,50 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { ScaleLoader } from "react-spinners";
+import React from "react";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
-import IntroSection from "./components/IntroSection";
+// IntroSection removed in previous step but import remains, cleaning it up
 import Navbar from "./components/Navbar";
 import ProjectSection from "./components/ProjectSection";
 import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const primaryPurple = "#8B5CF6";
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-screen bg-gradient-to-r from-purple-600 to-indigo-600">
-        <ScaleLoader
-          color={primaryPurple}
-          height={60}
-          width={10}
-          radius={6}
-          margin={4}
-        />
-      </div>
-    );
-  }
-
   return (
-    <div>
+    <div className="relative min-h-screen w-full bg-background font-sans text-foreground selection:bg-foreground selection:text-background">
       <Navbar />
-      <div className="w-full h-full overflow-x-hidden relative">
+      <main className="mx-auto max-w-4xl px-6 py-24 sm:py-32">
         <HeroSection />
-        <IntroSection />
         <Skills />
         <WorkExperience />
         <ProjectSection />
         <Footer />
-      </div>
+      </main>
+      <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-dot-white/[0.1]" />
     </div>
   );
 }

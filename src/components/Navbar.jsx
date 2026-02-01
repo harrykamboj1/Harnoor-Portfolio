@@ -1,10 +1,7 @@
-import { GitHub } from "@mui/icons-material";
 import React, { useState, useEffect } from "react";
 import { Bio } from "../data/data";
-import { Menu } from "lucide-react";
-
-const navItemClass = `text-customDarkPurple hover:scale-105 duration-60 font-medium cursor-pointer no-underline transition-all ease-in-out hover:text-[#8f64c3]`;
-const menuNavItemClass = `text-darkBlue hover:scale-105 duration-60 font-medium cursor-pointer no-underline transition-all ease-in-out hover:text-[#8f64c3]`;
+import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,109 +9,98 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  }, []);
+  const navLinks = [
+    { name: "About", to: "About" },
+    { name: "Skills", to: "Skills" },
+    { name: "Experience", to: "Experience" },
+    { name: "Projects", to: "Projects" },
+  ];
 
   return (
-    <div
-      className={`h-20 flex items-center justify-between text-xl top-0 z-10 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md" : ""
-      } w-full`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${scrolled ? "py-4" : "py-6"
+        }`}
     >
-      <div className="text-customDarkPurple text-2xl hover:scale-105 duration-60 font-semibold transition-all ease-in-out hover:text-[#8f64c3] no-underline py-1 pl-10">
-        <a href="/">Portfolio</a>
-      </div>
-
-      {/* LINKS */}
-      <div>
-        <ul className="w-full items-center justify-center gap-[34px] sm:flex hidden list-none">
-          <a className={navItemClass} href="#About">
-            About
-          </a>
-          <a className={navItemClass} href="#Skills">
-            Skills
-          </a>
-          <a className={navItemClass} href="#Experience">
-            Experience
-          </a>
-          <a className={navItemClass} href="#Projects">
-            Projects
-          </a>
-        </ul>
-      </div>
-
-      {/* SOCIAL LINKS */}
-      <div className="h-full items-center justify-center py-0 pr-6 sm:flex hidden">
-        <a
-          href={Bio.github}
-          target="_blank"
-          rel="noreferrer"
-          className="text-customDarkPurple flex gap-1 rounded-[20px] border-2 justify-center items-center transition-all ease-out delay-75 duration-75 cursor-pointer text-[16px] font-semibold no-underline py-2 px-5 hover:bg-[#8f64c3] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
+      <div
+        className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 ${scrolled
+          ? "bg-black/50 backdrop-blur-md border border-white/10 w-full max-w-2xl shadow-xl"
+          : "bg-transparent w-full max-w-4xl"
+          }`}
+      >
+        <Link
+          to="About"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          className="text-xl font-bold tracking-tighter hover:text-white/80 transition-colors cursor-pointer"
         >
-          <GitHub>Github</GitHub>
-          <div>Github</div>
-        </a>
-      </div>
+          Harnoor
+        </Link>
 
-      <div className="sm:hidden flex items-center justify-end pr-6">
-        <Menu
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-customDarkPurple"
-        />
-        <div
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } bg-customDarkPurple opacity-100 overflow-auto z-50 absolute top-20 right-0 left-0 mx-0 my-0 rounded-b-xl p-6 sidebar`}
-        >
-          <ul className="list-none flex flex-col justify-center items-center flex-1 w-full space-y-4">
-            <a className={menuNavItemClass} href="#About">
-              About
-            </a>
-            <a className={menuNavItemClass} href="#Skills">
-              Skills
-            </a>
-            <a className={menuNavItemClass} href="#Experience">
-              Experience
-            </a>
-            <a className={menuNavItemClass} href="#Projects">
-              Projects
-            </a>
-            <a
-              href={Bio.github}
-              target="_blank"
-              rel="noreferrer"
-              className="text-customDarkPurple w-full flex gap-1 rounded-[20px] border-2 justify-center items-center transition-all ease-out delay-75 duration-75 bg-[#201f2c] cursor-pointer text-[16px] font-semibold no-underline py-2 px-5 hover:bg-[#201f2c] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.to}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}
+              activeClass="text-white"
+              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors cursor-pointer"
             >
-              <GitHub>Github</GitHub>
-              <div>Github</div>
+              {link.name}
+            </Link>
+          ))}
+          <div className="h-4 w-[1px] bg-white/10 mx-2"></div>
+          <div className="flex items-center gap-4">
+            <a href={Bio.github} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <Github size={18} />
             </a>
-          </ul>
+            <a href={Bio.linkedin} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <Linkedin size={18} />
+            </a>
+            <a href={Bio.twitter} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
+              <Twitter size={18} />
+            </a>
+          </div>
         </div>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white focus:outline-none"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl pt-24 px-6 md:hidden flex flex-col items-center gap-8 animate-in slide-in-from-top-10 duration-200">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.to}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="text-2xl font-medium text-zinc-300 hover:text-white cursor-pointer"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 };
 

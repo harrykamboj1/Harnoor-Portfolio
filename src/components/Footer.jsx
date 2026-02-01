@@ -1,41 +1,52 @@
 import React from "react";
 import { Bio } from "../data/data";
-import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
-import { SiLeetcode } from "react-icons/si";
-import { Heart } from "lucide-react";
+import { Github, Linkedin, Twitter, SquareTerminal } from "lucide-react"; // Using consistent icons
 
 const Footer = () => {
   return (
-    <>
-      <section className="mx-auto px-4 py-10 sm:py-20 max-w-[1050px] h-full">
-        <hr className="text-skyblue" />
-
-        <div className="flex flex-col sm:flex-row justify-between items-center">
-          <div className="flex text-shadowOrange pt-4 gap-4 h-10 text-xl sm:text-2xl cursor-pointer transition-all ease-out delay-75 duration-75">
-            <a href={Bio.twitter} target="_blank" rel="noreferrer">
-              <BsTwitterX className="hover:scale-110 hover:text-[#fea390]" />
-            </a>
-            <a href={Bio.linkedin} target="_blank" rel="noreferrer">
-              <BsLinkedin className="hover:scale-110 hover:text-[#fea390]" />
-            </a>
-            <a href={Bio.github} target="_blank" rel="noreferrer">
-              <BsGithub className="hover:scale-110 hover:text-[#fea390]" />
-            </a>
-            <a href={Bio.leetCode} target="_blank" rel="noreferrer">
-              <SiLeetcode className="hover:scale-110 hover:text-[#fea390]" />
-            </a>
-          </div>
-          <div className="flex pt-4 text-shadowOrange text-sm sm:text-base">
-            <h1 className="px-1">Made with</h1>
-            <Heart size={16} className="self-center" />
-            <h1 className="px-1">Harnoor</h1>
-          </div>
+    <footer className="w-full py-12 mt-12 border-t border-white/10">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex gap-6">
+          <a
+            href={Bio.github}
+            target="_blank"
+            rel="noreferrer"
+            className="text-zinc-500 hover:text-white transition-colors"
+          >
+            <Github size={20} />
+          </a>
+          <a
+            href={Bio.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="text-zinc-500 hover:text-white transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href={Bio.twitter}
+            target="_blank"
+            rel="noreferrer"
+            className="text-zinc-500 hover:text-white transition-colors"
+          >
+            <Twitter size={20} />
+          </a>
+          {/* Fallback for LeetCode if lucide doesn't have it, or just use SquareTerminal as generic code icon */}
+          <a
+            href={Bio.leetCode}
+            target="_blank"
+            rel="noreferrer"
+            className="text-zinc-500 hover:text-white transition-colors"
+          >
+            <SquareTerminal size={20} />
+          </a>
         </div>
-      </section>
-      <div className="flex flex-col justify-center items-center text-yellow mb-2 text-xs sm:text-sm text-center px-4">
-        <h1>{`© Copyright ${new Date().getFullYear()} Harnoor Singh. All Rights Reserved.`}</h1>
+
+        <div className="text-zinc-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} Harnoor Singh.</p>
+        </div>
       </div>
-    </>
+    </footer>
   );
 };
 

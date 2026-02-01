@@ -1,47 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { Tabs } from "./SlideTab";
+import React from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/data";
 
 const ProjectSection = () => {
-  const [filterProject, setFilterProject] = useState([]);
-  const [tabValue, setTabValue] = useState("");
-
-  useEffect(() => {
-    setFilterProject(projects);
-  }, []);
-
-  useEffect(() => {
-    if (tabValue === "" || tabValue === "All") {
-      setFilterProject(projects);
-    } else {
-      const filteredProjects = projects.filter(
-        (project) => project.category === tabValue
-      );
-      setFilterProject(filteredProjects);
-    }
-  }, [tabValue]);
-
-  const handleTabValue = (tabValue) => {
-    setTabValue(tabValue);
-  };
+  // Take only featured projects or first 4-6 to emulate a focused portfolio
+  const featuredProjects = projects.slice(0, 4);
 
   return (
-    <section className="mt-20" id="Projects">
-      <div className="flex justify-center items-center">
-        <h1 className="text-lightGreen text-5xl font-sans font-bold cursor-pointer transition-all ease-out delay-75 duration-75 hover:scale-110">
-          Projects
-        </h1>
+    <section className="py-20" id="Projects">
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-foreground mb-4">Featured Projects</h2>
+        <p className="text-zinc-400">A collection of projects I've worked on.</p>
       </div>
 
-      <div className="mt-10 md:mt-14">
-        <Tabs handleTabClick={handleTabValue} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {featuredProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
 
-        <div className="flex justify-center pt-14 flex-wrap">
-          {filterProject.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+      <div className="mt-12 text-center">
+        <a
+          href="https://github.com/harrykamboj1?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+          className="text-sm border-b border-zinc-600 pb-1 text-zinc-400 hover:text-white hover:border-white transition-all"
+        >
+          View all projects &rarr;
+        </a>
       </div>
     </section>
   );

@@ -1,68 +1,61 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Bio } from "../data/data";
-import HeroHoverMotion from "./HeroHoverMotion";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  useEffect(() => {
-    // This effect will run once when the component mounts
-  }, []);
+  const words = "Hi, I'm Harnoor".split(" ");
 
   return (
-    <section className="mx-auto px-4 pt-20 max-w-[1050px]">
-      <div className="flex flex-row py-6 px-3 md:px-0" id="About">
-        <div className="flex w-full justify-between items-center mb-12 md:mb-24">
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="md:text-8xl text-6xl font-bold text-skyblue hover:scale-105 transition-all ease-in-out duration-300 cursor-pointer"
-            >
-              Harnoor
-            </motion.h1>
-            <div className="flex flex-col gap-4 mt-5 md:px-3">
-              <motion.h3
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="font-jetbrain text-xl md:text-2xl hover:scale-105 font-bold text-customDarkPurple transition-all ease-in-out duration-300 cursor-pointer"
+    <section className="flex flex-col items-start justify-center min-h-[60vh] text-left" id="About">
+      <div className="space-y-4">
+        <div className="overflow-hidden">
+          <motion.h1
+            className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/none"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } },
+              hidden: {},
+            }}
+          >
+            {words.map((word, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  hidden: { y: "100%" },
+                  visible: { y: 0, transition: { ease: [0.33, 1, 0.68, 1], duration: 0.8 } },
+                }}
+                className="inline-block mr-4 text-foreground"
               >
-                Freelancer.
-              </motion.h3>
-              <motion.h3
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="font-jetbrain text-xl md:text-2xl font-bold hover:scale-105 text-customDarkPurple transition-all ease-in-out duration-300 cursor-pointer"
-              >
-                Full Stack Developer
-              </motion.h3>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex gap-5 md:gap-8 pl-3 mt-6 md:mt-8 mb-6 md:mb-6"
-            >
-              <a
-                href={Bio.resume}
-                target="_blank"
-                rel="noreferrer"
-                className="text-customDarkPurple flex gap-1 rounded-[20px] border-2 justify-center items-center transition-all ease-out delay-75 duration-75 cursor-pointer text-[16px] font-semibold no-underline py-3 px-4 hover:bg-[#8f64c3] hover:text-[#ffffff] hover:border-r-customDarkPurple hover:scale-110"
-              >
-                <div>Check Resume</div>
-              </a>
-            </motion.div>
-          </div>
+                {word}
+              </motion.span>
+            ))}
+          </motion.h1>
         </div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="relative cursor-pointer animate-float hidden md:block mr-8"
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="max-w-[600px] text-zinc-500 md:text-xl dark:text-zinc-400"
         >
-          <HeroHoverMotion />
+          Full Stack Developer & Freelancer building digital experiences.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+        >
+          <a
+            href={Bio.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-black shadow transition-colors hover:bg-white/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+          >
+            View Resume <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
         </motion.div>
       </div>
     </section>

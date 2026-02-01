@@ -4,19 +4,33 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      customDarkPurple: "#c6a2f3",
-      darkBlue: "#1c1c2c",
-      darkGreen: "#29684e",
-      skyblue: "#b2daf1",
-      lightGreen: "#86efac",
-      lightBlue: "#67e8f8",
-      shadowOrange: "#dc816f",
-      lightGray: "#e3e2e5",
-      fadeOrange: "#fabf76",
-      yellow: "#fff278"
-    }
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+      },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+    },
   },
   plugins: [],
 }

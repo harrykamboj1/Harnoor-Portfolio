@@ -20,7 +20,7 @@ const SlideTabs = ({ onTabClick }) => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-customDarkPurple bg-darkBlue p-1"
+      className="relative mx-auto flex w-fit rounded-full border border-white/10 glass p-1 backdrop-blur-md"
     >
       <div onClick={() => onTabClick("All")}>
         <Tab setPosition={setPosition}>All</Tab>
@@ -74,7 +74,7 @@ const Cursor = ({ position }) => {
         width: position.width,
         opacity: position.opacity,
       }}
-      className="absolute z-0 h-7 rounded-full bg-skyblue md:h-12"
+      className="absolute z-0 h-7 rounded-full bg-gradient-to-r from-primary to-accent md:h-12 shadow-lg shadow-primary/30"
     />
   );
 };
