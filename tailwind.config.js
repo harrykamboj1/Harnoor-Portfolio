@@ -23,7 +23,8 @@ module.exports = {
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+          /* Duplicated row: shift by exactly one copy (-50% of total width) */
+          to: { transform: "translateX(-50%)" },
         },
         "marquee-vertical": {
           from: { transform: "translateY(0)" },

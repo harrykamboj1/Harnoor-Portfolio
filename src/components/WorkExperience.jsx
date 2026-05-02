@@ -25,7 +25,7 @@ const WorkExperience = () => {
                 <span className="text-xs text-zinc-500 font-mono">{exp.date}</span>
               </div>
               <div className="text-sm font-medium text-zinc-400 mb-2">{exp.company}</div>
-              <p className="text-sm text-zinc-300 leading-relaxed text-balance">
+              <p className="text-sm text-zinc-300 leading-relaxed text-balance whitespace-pre-line">
                 {exp.desc}
               </p>
             </div>

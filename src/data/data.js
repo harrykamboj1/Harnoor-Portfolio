@@ -1,72 +1,102 @@
-
 import {
-    SiReact, SiNextdotjs, SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiTypescript, SiTailwindcss,
-    SiNodedotjs, SiExpress, SiSpringboot, SiMysql, SiPostgresql, SiMongodb, SiPrisma, SiHibernate,
-    SiWebrtc, SiAmazonaws, SiDocker, SiNginx, SiGrafana, SiKubernetes, SiPrometheus,
-    SiGit, SiGithub, SiVisualstudiocode, SiPostman, SiFigma
+    SiReact,
+    SiNextdotjs,
+    SiJavascript,
+    SiTypescript,
+    SiTailwindcss,
+    SiNodedotjs,
+    SiExpress,
+    SiSpringboot,
+    SiPostgresql,
+    SiMongodb,
+    SiHibernate,
+    SiWebrtc,
+    SiDocker,
+    SiGit,
+    SiGithub,
+    SiOpenjdk,
+    SiPython,
+    SiMysql,
+    SiRedis,
+    SiCloudflare,
+    SiVercel,
+    SiGithubactions,
+    SiLangchain,
+    SiLanggraph,
+    SiElasticsearch,
+    SiOpenai,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
+import { OracleIcon } from "./skillIcons.jsx";
 
 export const Bio = {
     name: "Harnoor Singh",
     roles: [
         "Full Stack Developer",
-        "Freelancer",
+        "Software Engineer",
     ],
+    phone: "+91 78892 25504",
+    email: "singhharnoor116@gmail.com",
     github: "https://github.com/harrykamboj1",
     leetCode: "https://leetcode.com/u/singhharnoor116/",
     resume:
-        "https://drive.google.com/file/d/1CAGzp_qGVo5SBz3l5Q9Uho3gKu9SQrRn/view?usp=sharing",
+        "https://drive.google.com/file/d/1JzGGYofp0_NchXzuccGhbe773m7QwD_D/view?usp=drive_link",
     linkedin: "https://www.linkedin.com/in/harnoor-singh-3b163714b/",
     twitter: "https://twitter.com/Harnoor29581982",
 };
 
 export const skills = [
     {
-        title: "Frontend",
+        title: "Languages",
         skills: [
-            { name: "React Js", icon: SiReact },
-            { name: "Next Js", icon: SiNextdotjs },
-            { name: "HTML", icon: SiHtml5 },
-            { name: "CSS", icon: SiCss3 },
-            { name: "JavaScript", icon: SiJavascript },
-            { name: "Bootstrap", icon: SiBootstrap },
+            { name: "Java", icon: SiOpenjdk },
             { name: "TypeScript", icon: SiTypescript },
-            { name: "Tailwind", icon: SiTailwindcss },
+            { name: "Python", icon: SiPython },
+            { name: "SQL", icon: SiMysql },
+            { name: "JavaScript", icon: SiJavascript },
         ],
     },
     {
-        title: "Backend",
+        title: "Frameworks",
         skills: [
-            { name: "Node Js", icon: SiNodedotjs },
-            { name: "ExpressJs", icon: SiExpress },
-            { name: "SpringBoot", icon: SiSpringboot },
-            { name: "MySQL", icon: SiMysql },
-            { name: "Postgresql", icon: SiPostgresql },
+            { name: "Spring Boot", icon: SiSpringboot },
+            { name: "Node.js", icon: SiNodedotjs },
+            { name: "Express", icon: SiExpress },
+            { name: "React", icon: SiReact },
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "Tailwind CSS", icon: SiTailwindcss },
+        ],
+    },
+    {
+        title: "AI / LLM",
+        skills: [
+            { name: "LangChain", icon: SiLangchain },
+            { name: "LangGraph", icon: SiLanggraph },
+            { name: "RAG", icon: SiElasticsearch },
+            { name: "AI Agents", icon: SiOpenai },
+        ],
+    },
+    {
+        title: "Databases",
+        skills: [
+            { name: "PostgreSQL", icon: SiPostgresql },
             { name: "MongoDB", icon: SiMongodb },
-            { name: "Prisma", icon: SiPrisma },
-            { name: "Hibernate", icon: SiHibernate },
-            { name: "WebRTC", icon: SiWebrtc },
+            { name: "Oracle", icon: OracleIcon },
+            { name: "Redis", icon: SiRedis },
         ],
     },
     {
-        title: "DevOps",
+        title: "Tools & Infra",
         skills: [
-            { name: "AWS", icon: SiAmazonaws },
             { name: "Docker", icon: SiDocker },
-            { name: "Nginx", icon: SiNginx },
-            { name: "Grafana", icon: SiGrafana },
-            { name: "Kubernetes", icon: SiKubernetes },
-            { name: "Prometheus", icon: SiPrometheus },
-        ],
-    },
-    {
-        title: "Others",
-        skills: [
+            { name: "AWS", icon: FaAws },
             { name: "Git", icon: SiGit },
             { name: "GitHub", icon: SiGithub },
-            { name: "VS Code", icon: SiVisualstudiocode },
-            { name: "Postman", icon: SiPostman },
-            { name: "Figma", icon: SiFigma },
+            { name: "Cloudflare", icon: SiCloudflare },
+            { name: "CI/CD", icon: SiGithubactions },
+            { name: "Vercel", icon: SiVercel },
+            { name: "WebRTC", icon: SiWebrtc },
+            { name: "Hibernate", icon: SiHibernate },
         ],
     },
 ];
@@ -75,24 +105,39 @@ export const experiences = [
     {
         id: 0,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo0QNWj_LLJz-ViXBA3x7kY5GFI4TvOAxQUQ&s",
-        role: "Full Stack Developer",
-        company: "Twinline Business Solutions",
-        date: "June 2022 - Current",
-        desc: `Developed and implemented REST APIs to facilitate communication between frontend and backend systems,Led the development of more than 10 end-to-end features, from requirements gathering to deployment on
-production, Identified and resolved bugs to improve product quality and enhance user experience,
-Built and maintained the company’s website, incorporating HTML, CSS, and jQuery for frontend development,
-Utilized Reactjs, Java, Spring Boot, Hibernate, and Oracle Database to architect and implement scalable backend solutions`,
+        role: "Software Developer",
+        company: "Twinline Business Solutions — Gurugram, Haryana",
+        date: "May 2022 – Present",
+        desc: `Delivered 30+ production-ready full-stack features across loan origination and collections platforms, improving adoption and operational efficiency.
+
+Designed and optimized high-throughput RESTful micro-services, cutting API response time by 25% under peak load.
+
+Built a real-time Video KYC platform with WebRTC for secure remote fintech onboarding.
+
+Scaled the collections platform for millions of monthly transactions with high availability during peak cycles.
+
+Contributed to high-volume UPI payment infrastructure to improve reliability and fault tolerance.
+
+Optimized backend services (Java, Spring Boot, Hibernate, PostgreSQL), achieving 20–25% performance gains; reduced peak database load by 30–40% through SQL tuning and ORM optimization.
+
+Implemented multi-layer caching (Redis + Hibernate L1/L2) to lower database hits and latency.
+
+Built a scalable DOCX → HTML → PDF pipeline, improving document processing throughput by about 40%.
+
+Developed Credit Bureau and Business Rule Engine flows to automate loan decisions.
+
+Collaborated with Product, QA, and Design in Agile sprints to deliver features on schedule.`,
         skills: [
-            "ReactJS",
+            "Java",
             "Spring Boot",
             "Hibernate",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Java",
-            "AWS",
-            "Tailwind Css",
-            "Oracle"
+            "PostgreSQL",
+            "Redis",
+            "React",
+            "WebRTC",
+            "Oracle",
+            "REST APIs",
+            "Agile",
         ],
         doc: "",
     },
@@ -101,153 +146,153 @@ Utilized Reactjs, Java, Spring Boot, Hibernate, and Oracle Database to architect
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5t8yotXeA7z1QWyiOJyKMIpPD_RAscPBRTg&s",
         role: "Software Developer Intern",
         company: "Starbuzz.ai",
-        date: "Jan 2022 - June 2022",
-        desc: `Developed more than 10 screens using Flutter and Dart for the mobile application, Collaborated with the team on API integration to facilitate communication between the mobile application and
-backend services`,
-        skills: [
-            "Flutter",
-            "Dart",
-            "Java",
-            "Nextjs"
-        ],
-
-    }
-
+        date: "Jan 2022 – June 2022",
+        desc:
+            "Developed more than 10 screens using Flutter and Dart for the mobile application. Collaborated with the team on API integration between the mobile app and backend services.",
+        skills: ["Flutter", "Dart", "Java", "Next.js"],
+    },
 ];
-
 
 export const projects = [
     {
         id: 1,
-        title: "Mindbook",
-        date: "Jan 2026 - Feb 2026",
+        title: "AIMS",
+        date: "Jan 2026 – Apr 2026",
         description:
-            "Mindbook is a Second Brain application that transforms your documents into an interactive knowledge base. It leverages RAG (Retrieval-Augmented Generation) to allow users to chat with their documents. Features include secure authentication with Clerk, document storage via Cloudflare R2, and vector search using Pgvector.",
-        image:
-            "./Mindbook.png",
+            "Full-stack French and IELTS learning app used by 500+ students: speaking and writing practice, timed drills, mock tests, progress tracking, and AI-based feedback. ElevenLabs STT for transcription; Groq API for LLM-driven responses and speaking/writing evaluation.",
+        image: "./aims-website.png",
         tags: [
-            "Next.js",
-            "FastAPI",
+            "Node.js",
+            "Express.js",
+            "JavaScript",
+            "Supabase",
             "PostgreSQL",
-            "Langchain",
+            "Groq API",
+            "ElevenLabs STT",
+            "Resend API",
+        ],
+        category: "FullStack",
+        github: "https://github.com/harrykamboj1/Aims-website",
+        webapp: "https://aimseducation.org/",
+    },
+    {
+        id: 2,
+        title: "Mindbook",
+        date: "Jan 2026 – Feb 2026",
+        description:
+            "Production-grade RAG platform for real-time conversational querying over documents and websites using LangGraph agents and OpenAI. Scalable async ingestion with Celery and Redis for OCR, chunking, and vector embeddings. Vector retrieval and context orchestration tuned for answer quality and latency.",
+        image: "./Mindbook.png",
+        tags: [
+            "Next.js 15",
+            "Python",
+            "LangChain",
             "LangGraph",
-            "RAG",
-            "Clerk",
-            "Pgvector",
+            "Docker",
+            "Redis",
+            "Celery",
+            "PostgreSQL",
+            "AWS",
             "OpenAI",
-            "Cloudflare R2",
-            "Shadcn UI",
-            "Tailwind CSS"
+            "RAG",
         ],
         category: "FullStack",
         github: "https://github.com/harrykamboj1/Mindbook-backend",
         webapp: "https://mindbook-rho.vercel.app/",
     },
     {
-        id: 2,
+        id: 3,
         title: "Invisly.ai",
-        date: "Oct 2025 - Nov 2025",
+        date: "Oct 2025 – Nov 2025",
         description:
-            "Invisly.ai is an advanced, AI-driven stock analysis platform that empowers retail investors with real-time insights, chart-driven analytics, AI agent recommendations, stock alerts, and curated financial news — all in a clean and fast interface.",
-        image:
-            "./invisly.png",
+            "LLM-powered risk profiling with personalized investment insights and email automation. Multi-agent research pipeline using LangChain Deep Agents for market news, fundamental, and technical analysis. Real-time AI market summarization for concise investor insights.",
+        image: "./invisly.png",
         tags: [
-            "Nextjs",
+            "Next.js",
+            "Tailwind CSS",
+            "PostgreSQL",
             "MongoDB",
-            "Tailwind Css",
-            "Shadcn UI",
             "Inngest",
-            "Langchain Agents",
-            "Better Auth",
-            "Gemini Api"
+            "LangChain",
+            "Gemini",
+            "Deep Agents",
         ],
         category: "FullStack",
         github: "https://github.com/harrykamboj1/invisly",
         webapp: "https://invisly.vercel.app/",
     },
     {
-        id: 3,
+        id: 4,
         title: "Flex AI",
-        date: "Mar 2025 - Apr 2025",
+        date: "Mar 2025 – Apr 2025",
         description:
-            "Flex AI is a modern fitness platform powered by advanced AI technology. It provides personalized workout routines and diet plans tailored to individual goals, fitness levels, and dietary restrictions. Users can interact with an AI assistant through voice conversations to generate customized fitness programs.",
-        image:
-            "./Flexai.png",
+            "AI fitness platform with personalized workouts and diet plans. Voice conversations with an AI assistant to generate tailored programs based on goals and constraints.",
+        image: "./Flexai.png",
         tags: [
-            "Nextjs",
-            "PostgressSQL",
-            "Tailwind Css",
-            "Shadcn UI",
+            "Next.js",
+            "PostgreSQL",
+            "Tailwind CSS",
             "Convex",
             "VAPI",
-            "Clerk"
+            "Clerk",
         ],
         category: "Frontend",
         github: "https://github.com/harrykamboj1/Flex-AI",
         webapp: "https://flex-ai-theta.vercel.app/",
     },
     {
-        id: 4,
+        id: 5,
         title: "Gitlic",
-        date: "Jan 2025 - Mar 2025",
+        date: "Jan 2025 – Mar 2025",
         description:
-            "GitLic is a full-stack SaaS tool designed to help developers work and collaborate on complex projects. It leverages an end-to-end RAG (Retrieve, Augment, Generate) pipeline to provide an intuitive and efficient experience for managing GitHub repositories and pull requests.",
-        image:
-            "./Gitlic.png",
+            "Full-stack SaaS for collaborating on complex projects with an end-to-end RAG pipeline for GitHub repos and pull requests.",
+        image: "./Gitlic.png",
         tags: [
-            "Nextjs",
-            "PostgressSQL",
-            "Tailwind Css",
-            "Shadcn UI",
+            "Next.js",
+            "PostgreSQL",
+            "Tailwind CSS",
             "Prisma",
             "Gemini AI",
             "LangChain",
             "Assembly AI",
             "Razorpay",
-            "TRPC"
+            "tRPC",
         ],
         category: "FullStack",
         github: "https://github.com/harrykamboj1/GitLic",
         webapp: "https://gitlic.vercel.app/",
     },
     {
-        id: 5,
+        id: 6,
         title: "FinanceFlow",
-        date: "May 2024 - June 2024",
+        date: "May 2024 – June 2024",
         description:
-            "This is a comprehensive Finance SaaS Platform designed to help you track your income and expenses, categorize transactions, and gain insights through detailed charts.",
-        image:
-            "./FinanceFlow.png",
-        tags: ["Nextjs", "Reactjs", "Tanstack Query", "Tailwind CSS", "Recharts", "Hono", "Drizzle", "PostgresSql", "Clerk Auth"],
+            "Finance SaaS to track income and expenses, categorize transactions, and visualize insights with charts.",
+        image: "./FinanceFlow.png",
+        tags: [
+            "Next.js",
+            "React",
+            "TanStack Query",
+            "Tailwind CSS",
+            "Recharts",
+            "Hono",
+            "Drizzle",
+            "PostgreSQL",
+            "Clerk",
+        ],
         category: "FullStack",
         github: "https://github.com/harrykamboj1/FinanceFlow",
         webapp: "https://finance-flow-lovat.vercel.app/",
-
     },
     {
-        id: 6,
+        id: 7,
         title: "LeetCode Profile",
-        date: "Apr 2022 - Current",
+        date: "Apr 2022 – Present",
         description:
-            "Showcasing consisten problem solving skills and algorithmic thinking.",
-        image:
-            "./LeetCode.png",
-        tags: ["Data Structures", "Algorithm", "Java"],
+            "Consistent problem-solving practice: data structures, algorithms, and Java.",
+        image: "./LeetCode.png",
+        tags: ["Data Structures", "Algorithms", "Java"],
         category: "DSA",
         github: "https://leetcode.com/u/singhharnoor116/",
         webapp: "https://leetcode.com/u/singhharnoor116/",
     },
-    {
-        id: 7,
-        title: "Aims website",
-        date: "Aug 2024 - Sep 2024",
-        description:
-            "Official website of Aims (IELTS | PTE | FRENCH)",
-        image:
-            "./aims-website.png",
-        tags: ["Javascript", "Reactjs", "Next.js", "Tailwind"],
-        category: "Frontend",
-        github: "https://github.com/harrykamboj1/Aims-website",
-        webapp: "https://aimseducation.org/",
-    }
 ];
