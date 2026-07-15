@@ -40,8 +40,8 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="max-w-[600px] text-zinc-500 md:text-xl dark:text-zinc-400"
         >
-          Full Stack Developer & Freelancer building digital experiences.
-        </motion.p>
+          Software Engineer • AI Engineer • Open Source Contributor
+          </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

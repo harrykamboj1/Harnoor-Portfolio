@@ -159,8 +159,8 @@ export const projects = [
         title: "AIMS",
         date: "Jan 2026 – Apr 2026",
         description:
-            "Full-stack French and IELTS learning app used by 500+ students: speaking and writing practice, timed drills, mock tests, progress tracking, and AI-based feedback. ElevenLabs STT for transcription; Groq API for LLM-driven responses and speaking/writing evaluation.",
-        image: "./aims-website.png",
+            "Full-stack French and IELTS learning app used by 3000+ students: speaking and writing practice, timed drills, mock tests, progress tracking, and AI-based feedback. ElevenLabs STT for transcription; Groq API for LLM-driven responses and speaking/writing evaluation.",
+        image: "./aims-website-1.png",
         tags: [
             "Node.js",
             "Express.js",
@@ -294,5 +294,71 @@ export const projects = [
         category: "DSA",
         github: "https://leetcode.com/u/singhharnoor116/",
         webapp: "https://leetcode.com/u/singhharnoor116/",
+    },
+];
+
+export const openSource = [
+    {
+        repo: "aaif-goose/goose",
+        name: "Goose",
+        description:
+            "An open source, extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM.",
+        stars: "51k+",
+        language: "Rust / TypeScript",
+        link: "https://github.com/aaif-goose/goose",
+        contributions: [
+            {
+                title: "Add search filter to the provider grid",
+                status: "Merged",
+                link: "https://github.com/aaif-goose/goose/pull/10437",
+            },
+            {
+                title: "Hide nested config values in the Configuration Editor",
+                status: "Merged",
+                link: "https://github.com/aaif-goose/goose/pull/10390",
+            },
+            {
+                title: "Relabel settings 'Session' tab to 'External Backend'",
+                status: "Merged",
+                link: "https://github.com/aaif-goose/goose/pull/10318",
+            },
+            {
+                title: "Dedupe Nostr session deep link imports",
+                status: "Merged",
+                link: "https://github.com/aaif-goose/goose/pull/9918",
+            },
+        ],
+    },
+    {
+        repo: "andrewyng/aisuite",
+        name: "aisuite",
+        description:
+            "Andrew Ng's unified interface to multiple generative AI providers.",
+        stars: "14k+",
+        language: "Python",
+        link: "https://github.com/andrewyng/aisuite",
+        contributions: [
+            {
+                title: "Preserve Gemini thought signatures across multi-step tool calls",
+                status: "In Review",
+                link: "https://github.com/andrewyng/aisuite/pull/325",
+            },
+        ],
+    },
+    {
+        repo: "rohitg00/agentmemory",
+        name: "agentmemory",
+        description:
+            "Persistent memory for AI coding agents based on real-world benchmarks.",
+        stars: "25k+",
+        language: "TypeScript",
+        link: "https://github.com/rohitg00/agentmemory",
+        contributions: [
+            {
+                title: "Add per-session LLM token budget with hard cap and soft warn",
+                status: "In Review",
+                link: "https://github.com/rohitg00/agentmemory/pull/934",
+            },
+        ],
     },
 ];

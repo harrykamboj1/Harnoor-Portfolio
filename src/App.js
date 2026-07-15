@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 // IntroSection removed in previous step but import remains, cleaning it up
 import Navbar from "./components/Navbar";
+import OpenSourceSection from "./components/OpenSourceSection";
 import ProjectSection from "./components/ProjectSection";
 import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
@@ -16,6 +17,7 @@ function App() {
         <Skills />
         <WorkExperience />
         <ProjectSection />
+        <OpenSourceSection />
         <Footer />
       </main>
       <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-dot-white/[0.1]" />

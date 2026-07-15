@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: "Skills", to: "Skills" },
     { name: "Experience", to: "Experience" },
     { name: "Projects", to: "Projects" },
+    { name: "Open Source", to: "OpenSource" },
   ];
 
   return (
