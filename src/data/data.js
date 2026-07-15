@@ -108,28 +108,25 @@ export const experiences = [
         role: "Software Developer",
         company: "Twinline Business Solutions — Gurugram, Haryana",
         date: "May 2022 – Present",
-        desc: `Delivered 30+ production-ready full-stack features across loan origination and collections platforms, improving adoption and operational efficiency.
+        desc: `Built in-house AI agents for collections field-force planning that generate monthly, weekly, and daily route plans, suggesting optimal visit schedules for field officers.
 
-Designed and optimized high-throughput RESTful micro-services, cutting API response time by 25% under peak load.
+Delivered 30+ production-ready full-stack features across loan origination and collections platforms, improving adoption and operational efficiency.
+
+Designed high-throughput RESTful microservices and optimized backend services (Java, Spring Boot, Hibernate, PostgreSQL), cutting API response time by 25% under peak load.
+
+Reduced peak database load by 30–40% through SQL tuning, ORM optimization, and multi-layer caching (Redis + Hibernate L1/L2).
 
 Built a real-time Video KYC platform with WebRTC for secure remote fintech onboarding.
 
-Scaled the collections platform for millions of monthly transactions with high availability during peak cycles.
-
-Contributed to high-volume UPI payment infrastructure to improve reliability and fault tolerance.
-
-Optimized backend services (Java, Spring Boot, Hibernate, PostgreSQL), achieving 20–25% performance gains; reduced peak database load by 30–40% through SQL tuning and ORM optimization.
-
-Implemented multi-layer caching (Redis + Hibernate L1/L2) to lower database hits and latency.
+Scaled the collections platform to millions of monthly transactions with high availability during peak cycles; contributed to high-volume UPI payment infrastructure for reliability and fault tolerance.
 
 Built a scalable DOCX → HTML → PDF pipeline, improving document processing throughput by about 40%.
 
-Developed Credit Bureau and Business Rule Engine flows to automate loan decisions.
-
-Collaborated with Product, QA, and Design in Agile sprints to deliver features on schedule.`,
+Automated loan decisioning through Credit Bureau integrations and Business Rule Engine flows.`,
         skills: [
             "Java",
             "Spring Boot",
+            "AI Agents",
             "Hibernate",
             "PostgreSQL",
             "Redis",
@@ -147,9 +144,10 @@ Collaborated with Product, QA, and Design in Agile sprints to deliver features o
         role: "Software Developer Intern",
         company: "Starbuzz.ai",
         date: "Jan 2022 – June 2022",
-        desc:
-            "Developed more than 10 screens using Flutter and Dart for the mobile application. Collaborated with the team on API integration between the mobile app and backend services.",
-        skills: ["Flutter", "Dart", "Java", "Next.js"],
+        desc: `Built 10+ screens in Flutter and Dart for the mobile app of Starbuzz.ai, an AI-powered influencer marketing platform for creator discovery and campaign management.
+
+Integrated the mobile app with backend REST APIs, working with the team on API contracts and data flow between the app and services.`,
+        skills: ["Flutter", "Dart", "Java", "Next.js", "REST APIs"],
     },
 ];
 
