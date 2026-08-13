@@ -40,7 +40,7 @@ export const Bio = {
     github: "https://github.com/harrykamboj1",
     leetCode: "https://leetcode.com/u/singhharnoor116/",
     resume:
-        "https://drive.google.com/file/d/1gNxjyoUl5RU2dUTPIPqtaE3G6UGG7W1E/view?usp=drive_link",
+        "https://drive.google.com/file/d/1NDvKGJuzOBm3qlZyyy_7MaRefwLC8XdU/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/harnoor-singh-3b163714b/",
     twitter: "https://twitter.com/Harnoor29581982",
 };
