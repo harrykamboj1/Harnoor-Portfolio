@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "Experience", to: "Experience" },
     { name: "Projects", to: "Projects" },
     { name: "Open Source", to: "OpenSource" },
+    { name: "Writing", to: "Writing" },
   ];
 
   return (
@@ -30,11 +31,12 @@ const Navbar = () => {
     >
       <div
         className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 ${scrolled
-          ? "bg-black/50 backdrop-blur-md border border-white/10 w-full max-w-2xl shadow-xl"
+          ? "bg-black/50 backdrop-blur-md border border-white/10 w-full max-w-4xl shadow-xl"
           : "bg-transparent w-full max-w-4xl"
           }`}
       >
         <Link
+          href="#About"
           to="About"
           smooth={true}
           duration={500}
@@ -45,10 +47,11 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-3 lg:gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
+              href={`#${link.to}`}
               to={link.to}
               smooth={true}
               duration={500}
@@ -60,8 +63,8 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <div className="h-4 w-[1px] bg-white/10 mx-2"></div>
-          <div className="flex items-center gap-4">
+          <div className="h-4 w-[1px] bg-white/10"></div>
+          <div className="flex items-center gap-3">
             <a href={Bio.github} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
               <Github size={18} />
             </a>
@@ -77,7 +80,11 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white focus:outline-none"
+          type="button"
+          aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          className="relative z-50 md:hidden text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -85,10 +92,11 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl pt-24 px-6 md:hidden flex flex-col items-center gap-8 animate-in slide-in-from-top-10 duration-200">
+        <div id="mobile-navigation" className="fixed inset-0 z-40 overflow-y-auto bg-black/95 backdrop-blur-3xl pt-24 pb-8 px-6 md:hidden flex flex-col items-center gap-6 animate-in slide-in-from-top-10 duration-200">
           {navLinks.map((link) => (
             <Link
               key={link.name}
+              href={`#${link.to}`}
               to={link.to}
               smooth={true}
               duration={500}

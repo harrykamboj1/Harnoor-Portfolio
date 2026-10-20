@@ -12,6 +12,19 @@ Check out the live demo of the portfolio at: [harnoor-portfolio.vercel.app](http
 - **Interactive Animations:** Utilizes Framer Motion for smooth and engaging animations.
 - **Modern UI:** Clean and contemporary design to highlight projects and skills.
 
+## Updating Writing
+
+Add article entries to `src/data/articles.js`, newest first. The Writing section
+displays the first four entries and links each card directly to its article on X.
+Each entry needs `title`, `summary`, and `url`; `publishedAt` (`YYYY-MM-DD`),
+`tags`, and `coverImage` are optional. A commented example is included in the file.
+
+For local covers, put the image in `public/articles/` and use a path such as
+`/articles/cover.jpg`. Missing or unavailable covers use a decorative fallback.
+Until entries are added, the section shows a card linking to the X articles
+collection. Article details are maintained manually; publishing on X does not
+automatically update the portfolio.
+
 ## Technologies Used
 
 - **ReactJS:** A JavaScript library for building user interfaces.

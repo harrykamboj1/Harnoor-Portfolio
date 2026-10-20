@@ -7,6 +7,7 @@ import OpenSourceSection from "./components/OpenSourceSection";
 import ProjectSection from "./components/ProjectSection";
 import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
+import WritingSection from "./components/WritingSection";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <WorkExperience />
         <ProjectSection />
         <OpenSourceSection />
+        <WritingSection />
         <Footer />
       </main>
       <div className="fixed inset-0 -z-10 h-full w-full bg-background bg-dot-white/[0.1]" />
